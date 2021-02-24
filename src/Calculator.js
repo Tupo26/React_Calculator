@@ -58,7 +58,7 @@ class NumbersKeyboard extends React.Component {
 			</div>
 			<div>
 				<div className="numberkeys-row">
-				{this.renderKey("-")}
+				{this.renderBlank()}
 				{this.renderKey(0)}
 				{this.renderBlank()}
 				</div>
@@ -120,7 +120,7 @@ class CommandKeyboard extends React.Component {
 				<div className="numberkeys-row">
 					{this.renderKey("C", ()=>this.props.onClickClear())}
 					{this.renderKey("CE", ()=>this.props.onClickClearEntry())}
-					{this.renderKey("<=", ()=>this.props.onClickDelete())}
+					{this.renderKey("<", ()=>this.props.onClickDelete())}
 				</div>
 			</div>
 		);
@@ -261,7 +261,7 @@ class Panel extends React.Component{
 	
 	render(){
 		
-		const bottom => <h4>Tuomas Porvali</h4>;
+		const bottom = <h4>Tuomas Porvali</h4>;
 		let display;
 		
 		if(this.state.storedValue === 0)
